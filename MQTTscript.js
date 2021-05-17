@@ -65,7 +65,7 @@ $(function(){
         var datum = new Date();  // vytvo��m objekt aktu�ln�ho data a �asu p��choz� zpr�vy
         var cas = datum.getHours() + ":" +  datum.getMinutes()  + ":" + datum.getSeconds();  // z objektu datum z�sk�m hodinu, minutu a sekundu
               
-        zprava = "ID: " + pocitadloPrichozichZprav + ", Time: " + cas + ", Message: " + message + "<br>" + zpravy;  // do prom�nn� zpr�vy ulo��m nov� p��choz� zpr�vu a p�ilo���m k n� v�echny p�edchoz�; �ad�m tak jednotliv� zpr�vy od nejnov�j��
+        zprava = "ID: " + pocitadloPrichozichZprav + ", Time: " + cas + ", Message: " + message.payloadString + "<br>" + zpravy;  // do prom�nn� zpr�vy ulo��m nov� p��choz� zpr�vu a p�ilo���m k n� v�echny p�edchoz�; �ad�m tak jednotliv� zpr�vy od nejnov�j��
         pocitadloPrichozichZprav++;     // inkrementuji po��tadlo pro p��choz� zpr�vy
         zpravy = zprava;       // do prom�nn= zpr�vy p�i�ad� novou zpr�vu i s t�mi p�edchoz�mi
        
@@ -78,7 +78,7 @@ $(function(){
         // v na�em p��pad� je bude ignorovat, jeliko� v sekci catch ��dn� jin� zpracov�n� nem�me a vyp�e pouze zpr�vu do konzole
         try {
                      
-            var objetZpravy = JSON.parse(message); // vytvo��m nov� objekt objektZpravy, do kter�ho naparsuju p��choz� JSON
+            var objetZpravy = JSON.parse(message.payloadString); // vytvo��m nov� objekt objektZpravy, do kter�ho naparsuju p��choz� JSON
                                   
             teplota.innerHTML = objetZpravy.Teplota;           // do elementu teplota vlo��m hodnotu teploty
             vlhkost.innerHTML = objetZpravy.Vlhkost;           // do elementu vlhkost vlo��m hodnotu vlhkosti
