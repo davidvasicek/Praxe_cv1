@@ -12,7 +12,7 @@ Adafruit_BME280 bme; // inicializace senzoru BME280 senzoru z knihovny
 
 String pracoviste = "pracoviste_x"; // číslo pracoviště; nahraďte x číslem vašeho pracoviště
  
-const char* ssid = "David_2.4G";         // Název WiFi sítě; SSID
+const char* ssid = "David-IoT";         // Název WiFi sítě; SSID
 const char* password = "frydekmistek";   // Heslo WiFi sítě; password
 
 unsigned long posledniCasOdeslani = 0; // inicializace proměnné posledniCasOdeslani typu long pro ukládání času posledního publikování
@@ -55,7 +55,7 @@ void setup(){
 
  // inicializace objektu pomocí hostitelského jména zprostředkovatele, portu zprostředkovatelů (výchozí port 1883) a základní třídy Klient pro síťový přenos;
  // v případě šifrovaného přenosu definujte číslo portu clientMQTT.begin(const char hostname[], int port, Client &client);
- clientMQTT.begin("broker.shiftr.io", clientWiFi);
+ clientMQTT.begin("192.168.1.100", clientWiFi);
 
   // nastavení posluchače na odebírané téma; vše co do tématu pošlu, okamžitě opět přečtu; 
   // když přijde zpráva z odebíraného tématu, spustí se funkce messageReceived 
@@ -76,13 +76,13 @@ void connectToMQTT() {
   // připojení klienta ke zprostředkovateli pomocí dodaného ID klienta a volitelného uživatelského jména a hesla;
   // kanál try používá „try“ jako uživatelské jméno i heslo
   // připojování se zacyklí, dokud nebude klient připojen
-  while (!clientMQTT.connect("BSS", "try", "try")) {
+  while (!clientMQTT.connect(pracoviste)) {
     Serial.print(".");
   }
  
  Serial.println("klient MQTT připojen"); // výpis na obrazovku
  
- clientMQTT.subscribe("BSS/" + pracoviste); // přihlášení se k odběru konkrétního tématu; budu odebírat BSS/pracoviste_x
+ clientMQTT.subscribe(pracoviste); // přihlášení se k odběru konkrétního tématu; budu odebírat BSS/pracoviste_x
 }
  
 void loop() {
@@ -116,6 +116,6 @@ void loop() {
     jsonObject.printTo(jsonString); // vytisknu jsonObjekt jako string do proměnné jsonString
     
     posledniCasOdeslani = millis();
-    clientMQTT.publish("BSS/" + pracoviste, jsonString);  // publikování JSON zprávy do tématu BSS/pracoviste_x
+    clientMQTT.publish(pracoviste, jsonString);  // publikování JSON zprávy do tématu BSS/pracoviste_x
   }
 }
