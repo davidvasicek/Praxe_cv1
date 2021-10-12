@@ -1,0 +1,18 @@
+	StaticJsonBuffer<200> jsonBuffer;
+  JsonObject& root = jsonBuffer.parseObject(payload);
+  
+  // Test if parsing succeeds.
+  if (!root.success()) {
+    Serial.println("parseObject() failed");
+    return;
+  }
+
+  String operation = root["operation"].as<String>();
+  
+  if(operation == "switchLght1"){
+
+      bool buttonStatus = root["status"].as<bool>();
+
+	digitalWrite(pin, status)
+
+   }
