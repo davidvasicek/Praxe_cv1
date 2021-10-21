@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "658739179328",
+    "firebase_url": "https://erasmussk2021-default-rtdb.firebaseio.com",
+    "project_id": "erasmussk2021",
+    "storage_bucket": "erasmussk2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658739179328:android:ccb316b055df7027a914a5",
+        "android_client_info": {
+          "package_name": "com.example.erasmus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsxg6cRV_FaNRWgmvxVhH8iFbxUHr0m9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658739179328:android:dc2410dd51d8919fa914a5",
+        "android_client_info": {
+          "package_name": "com.example.erasmussmarthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsxg6cRV_FaNRWgmvxVhH8iFbxUHr0m9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
