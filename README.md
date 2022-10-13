@@ -1,1 +1,11 @@
-https://forms.office.com/Pages/ResponsePage.aspx?id=rb6A6rQ0m0ye7s3kJA6Yzp-otcPCBOxBkv9e8cyc5XVUN1JCSUpWNUY2TERYWFVWQ1dTTkU0NERZMS4u
+StaticJsonBuffer<200> jsonBuffer;
+  JsonObject& root = jsonBuffer.parseObject(payload);
+  
+  // Test if parsing succeeds.
+  if (!root.success()) {
+    Serial.println("parseObject() failed");
+    return;
+  }
+
+  int statusLed = root["statusLed"].as<int>();
+  Serial.println(statusLed);
