@@ -1,0 +1,25 @@
+     private FirebaseDatabase mFirebaseDatabaseDatabase;
+    private DatabaseReference mDatabaseReference;
+
+          
+        mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("") ;
+
+
+
+
+
+
+ mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+
+                }
+            });
