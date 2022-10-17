@@ -1,63 +1,34 @@
 {
   "project_info": {
-    "project_number": "658739179328",
-    "firebase_url": "https://erasmussk2021-default-rtdb.firebaseio.com",
-    "project_id": "erasmussk2021",
-    "storage_bucket": "erasmussk2021.appspot.com"
+    "project_number": "931972236705",
+    "firebase_url": "https://erasmus-eaa4d-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "erasmus-eaa4d",
+    "storage_bucket": "erasmus-eaa4d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:658739179328:android:ccb316b055df7027a914a5",
+        "mobilesdk_app_id": "1:931972236705:android:d044b1064a4f1e098537e0",
         "android_client_info": {
-          "package_name": "com.example.erasmus"
+          "package_name": "com.example.smarthomeerasmus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+          "client_id": "931972236705-ietg3o62j4lq8shsthreg856lqhtfbme.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAsxg6cRV_FaNRWgmvxVhH8iFbxUHr0m9Q"
+          "current_key": "AIzaSyDit4YNr60pOxhvDft1euYk9yl_no113CM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:658739179328:android:dc2410dd51d8919fa914a5",
-        "android_client_info": {
-          "package_name": "com.example.erasmussmarthome"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAsxg6cRV_FaNRWgmvxVhH8iFbxUHr0m9Q"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "658739179328-672o305mou9qgar1bsq30li3cjtbl1vu.apps.googleusercontent.com",
+              "client_id": "931972236705-ietg3o62j4lq8shsthreg856lqhtfbme.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
