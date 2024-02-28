@@ -10,7 +10,7 @@
 
 Adafruit_BME280 bme; // inicializace senzoru BME280 senzoru z knihovny
 
-String pracoviste = "pracoviste_x"; // číslo pracoviště; nahraďte x číslem vašeho pracoviště
+const char* pracoviste = "pracoviste_x"; // číslo pracoviště; nahraďte x číslem vašeho pracoviště
  
 const char* ssid = "David-IoT";         // Název WiFi sítě; SSID
 const char* password = "frydekmistek";   // Heslo WiFi sítě; password
